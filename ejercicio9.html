@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Ejercicio 9</title>
+    <script>
+        let nombres = [];
+        let edades = [];
+        let mayoresDeEdad = [];
+        let edadMayor = 0;
+        let alumnosEdadMayor = [];
+        function ingresarDatos(nombres, edades){
+            nombre = prompt(`Ingrese el nombre del alumno, para salir escriba *`);
+            if (nombre != "*") {
+                edad = +prompt(`Ingrese la edad del estudiante`);
+               nombres.push(nombre);
+               edades.push(edad);
+               ingresarDatos(nombres, edades);
+            }
+        }
+        ingresarDatos(nombres, edades);
+        edades.forEach((edad, indice) => {
+            if (edad >= 18){
+                mayoresDeEdad.push(nombres[indice]);
+            }
+        });
+        edadMayor = edades.reduce((a, b) => Math.max(a, b));
+        edades.forEach((edad, indice) => {
+            if (edad == edadMayor){
+                alumnosEdadMayor.push(nombres[indice]);
+            }
+        });
+        alert(`Los alumnos mayores de edad son:\n ${mayoresDeEdad.join("\n")}`);
+        alert(`La edad mayor es ${edadMayor} y los alumnos que tienen dicha edad son:\n${alumnosEdadMayor.join("\n")}`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

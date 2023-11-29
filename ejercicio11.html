@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Ejercicio 11</title>
+    <script>
+        let tamaño = +prompt(`Ingrese el tamaño del arreglo`);
+        let numero = +prompt(`Ingrese numero para rellenar con multiplos de este el arreglo`);
+        function generarArreglo(tamaño, numero) {
+            let arregloGenerado = [];
+            for (let index = numero; index <= (tamaño * numero); index += numero) {
+                arregloGenerado.push(index);
+            }
+            return arregloGenerado;
+        }
+        function mostrarArreglo(arreglo) {
+            alert(`El arreglo generado es ${generarArreglo(tamaño, numero)}`);
+        }
+        mostrarArreglo(generarArreglo(tamaño, numero));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

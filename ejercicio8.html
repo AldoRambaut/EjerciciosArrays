@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Ejercicio 8</title>
+    <script>
+        let arrayAleatorio = [];
+        let arraylength = +prompt(`ingrese un numero impar`);
+        while(arraylength % 2 == 0){
+            arraylength = +prompt(`Numero invalido, ingrese un numero inpar`);
+        }
+        for (let index = 0; index < arraylength; index++) {
+            arrayAleatorio[arrayAleatorio.length] = parseInt(Math.random() * 100);
+        }
+        alert(`El arreglo generado aleatoriamente es ${arrayAleatorio} y el valor de la posicion central es ${arrayAleatorio[parseInt((arraylength)/ 2)]}`);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

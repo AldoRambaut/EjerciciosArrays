@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Ejercicio 10</title>
+    <script>
+       let fila1 = [];
+       let fila2 = [];
+       let fila3 = [];
+       let fila4 = [];
+       let fila5 = [];
+       let matriz = [fila1, fila2, fila3, fila4, fila5];
+       let columna1 = [];
+       let columna2 = [];
+       let columna3 = [];
+       let columna4 = [];
+       let columna5 = [];
+       let columnas = [columna1, columna2, columna3, columna4, columna5];
+       
+       for (const fila of matriz) {
+        for (let i = 0; i < 5; i++) {
+            fila[i] = parseInt(Math.random()*100);
+        }
+       }
+       
+       for (const fila of matriz) {
+        document.write(`<p> ${fila.join(" , ")} </p>`);
+       }
+       for (const fila of matriz) {
+        document.write(`<p> Suma por filas\n${fila} = ${fila.reduce((total, numero) => total + numero)} </p>`);
+       }
+       for (let i = 0; i < 5; i++) {
+        for (const fila of matriz) {
+            columnas[i].push(fila[i]);
+        }
+       }
+       for (const columna of columnas) {
+        document.write(`<p> Suma por columnas\n${columna} = ${columna.reduce((total, numero) => total + numero)} </p>`);
+       }
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
